@@ -1,0 +1,11 @@
+<h2 class="page-header">Archives</h2>
+<% var lastYear = null; page.posts.sort('date', -1).each(function(post){ var y = post.date.year(); if (y !== lastYear) { if (lastYear !== null) { %></section><% } %>
+  <h3 class="year"><%= y %></h3>
+  <section class="post-list">
+<% lastYear = y; } %>
+  <div class="post-row">
+    <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <span class="post-date"><%= date(post.date, 'MMM D, YYYY') %></span>
+  </div>
+<% }); %>
+<% if (lastYear !== null) { %></section><% } %>

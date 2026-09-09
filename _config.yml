@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 浥之的小站
-subtitle: '知行合一'
-description: '机器学习 · Agent · 阅读 · 随笔'
+title: Yizhi's Works
+subtitle: ''
+description: 'Notes on machine learning, agents, and engineering.'
 keywords:
-author: 浥之
-language: zh-CN
+author: Yizhi
+language: en
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: minimal
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

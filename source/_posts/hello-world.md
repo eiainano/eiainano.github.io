@@ -1,17 +1,12 @@
-title: 你好，世界 —— 博客开张
+---
+title: Hello World
 date: 2026-09-09 22:45:00
 tags:
-  - 随笔
-categories:
-  - 开张
+  - notes
 ---
 
-欢迎来到我的个人博客。
+Welcome to my personal blog.
 
-这里会记录我在机器学习、Agent 系统、工程实践上的思考，也会有阅读与生活的随笔。
+I will be writing about machine learning, agent systems, engineering practice, and occasional reading notes.
 
-站名取自「知行合一」——想了就去做，做了再复盘。
-
-> 民胞物与，自强不息；致贤弘道，知行合一。
-
-本站基于 [Hexo](https://hexo.io/) 构建，托管于 GitHub Pages。
+The site is deliberately minimal: black on white, serif type, nothing else. Built with Hexo, hosted on GitHub Pages.

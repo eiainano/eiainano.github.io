@@ -1,0 +1,8 @@
+<section class="post-list">
+<% site.posts.sort('date', -1).each(function(post){ %>
+  <div class="post-row">
+    <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <span class="post-date"><%= date(post.date, 'MMM D, YYYY') %></span>
+  </div>
+<% }); %>
+</section>
