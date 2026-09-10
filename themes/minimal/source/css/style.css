@@ -116,7 +116,7 @@ h3.year { font-size: 1.1rem; margin: 1.9rem 0 0.4rem; color: var(--muted); font-
   margin: 1.5rem 0;
   padding: 0.05rem 1.15rem;
   border-left: 3px solid var(--fg);
-  color: #333333;
+  color: var(--quote-fg);
 }
 .post-content code {
   font-family: "SF Mono", Menlo, Consolas, monospace;
@@ -125,7 +125,7 @@ h3.year { font-size: 1.1rem; margin: 1.9rem 0 0.4rem; color: var(--muted); font-
   padding: 0.12em 0.35em;
 }
 .post-content pre {
-  background: #f7f7f7;
+  background: var(--pre-bg);
   padding: 1rem 1.1rem;
   overflow-x: auto;
   line-height: 1.55;

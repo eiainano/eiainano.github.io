@@ -30,7 +30,11 @@
   el.style.colorScheme = dark ? 'dark' : 'light';
 })();
 </script>
-<link rel="stylesheet" href="<%- url_for('css/style.css') %>?v=20260910">
+<%
+  var cssVer = (typeof process !== 'undefined' && process.env && process.env.GITHUB_SHA)
+    ? process.env.GITHUB_SHA.slice(0, 7) : 'dev';
+%>
+<link rel="stylesheet" href="<%- url_for('css/style.css') %>?v=<%= cssVer %>">
 </head>
 <body>
 <main>
