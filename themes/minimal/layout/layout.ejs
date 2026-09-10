@@ -20,12 +20,25 @@
 <meta property="og:url" content="<%= pageUrl %>">
 <meta name="twitter:card" content="summary">
 <link rel="sitemap" type="application/xml" href="<%- url_for('sitemap.xml') %>">
+<script>
+(function(){
+  var el = document.documentElement;
+  var stored = null;
+  try { stored = localStorage.getItem('theme'); } catch (e) {}
+  var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  el.classList.add(dark ? 'dark' : 'light');
+  el.style.colorScheme = dark ? 'dark' : 'light';
+})();
+</script>
 <link rel="stylesheet" href="<%- url_for('css/style.css') %>">
 </head>
 <body>
 <main>
   <header>
-    <h1 class="site-title"><a href="<%- url_for('/') %>"><%= config.title %></a></h1>
+    <div class="site-header">
+      <h1 class="site-title"><a href="<%- url_for('/') %>"><%= config.title %></a></h1>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
+    </div>
     <nav>
       <a href="<%- url_for('/') %>">Posts</a>
       <a href="<%- url_for('archives') %>">Archives</a>
@@ -38,6 +51,26 @@
     <span>&copy; <%= new Date().getFullYear() %> Yizhi</span>
     <span class="footer-right">Powered by Hexo</span>
   </footer>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var el = document.documentElement;
+  function isDark(){
+    return el.classList.contains('dark') ||
+      (!el.classList.contains('light') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+  function render(){ btn.textContent = isDark() ? '\u2600' : '\u263E'; }
+  render();
+  btn.addEventListener('click', function(){
+    var toDark = !isDark();
+    el.classList.toggle('dark', toDark);
+    el.classList.toggle('light', !toDark);
+    el.style.colorScheme = toDark ? 'dark' : 'light';
+    try { localStorage.setItem('theme', toDark ? 'dark' : 'light'); } catch (e) {}
+    render();
+  });
+})();
+</script>
 </main>
 </body>
 </html>
