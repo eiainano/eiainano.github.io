@@ -128,12 +128,55 @@ h3.year { font-size: 1.1rem; margin: 1.9rem 0 0.4rem; color: var(--muted); font-
 }
 .post-content pre {
   background: var(--pre-bg);
+  margin: 1.5rem 0;
   padding: 1rem 1.1rem;
   overflow-x: auto;
   line-height: 1.55;
   font-size: 0.88rem;
 }
 .post-content pre code { background: none; padding: 0; }
+
+/* Tables */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.94rem;
+}
+.post-content th, .post-content td {
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.post-content th { border-bottom-color: var(--fg); font-weight: 500; }
+
+/* Highlighted code blocks (Hexo highlight markup) */
+.post-content figure.highlight {
+  background: var(--pre-bg);
+  margin: 1.5rem 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+.post-content figure.highlight table { width: 100%; border-collapse: collapse; }
+.post-content figure.highlight pre {
+  background: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  font-size: inherit;
+  line-height: inherit;
+}
+.post-content figure.highlight td { border: none; padding: 0; }
+.post-content figure.highlight .gutter {
+  color: var(--muted);
+  text-align: right;
+  padding-right: 1.1rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.post-content figure.highlight .line { display: inline-block; }
 .post-content img { max-width: 100%; }
 .post-content hr { border: none; border-top: 1px solid var(--border); }
 
