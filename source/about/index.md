@@ -2,8 +2,10 @@
 title: About
 ---
 
-I am Yizhi, a machine learning engineer.
+Hi, I'm Yizhi Zhang, a Machine Learning Engineer working on AI Agent Systems.
 
-I work on large-scale recommendation models and generative foundation models, and I spend my spare time exploring LLM agents, retrieval systems, and the tooling around them.
+Alumnus of [BUAA](https://www.buaa.edu.cn/) and [Brown](http://brown.edu/). Now living in Beijing, and occasionally Shenzhen.
 
-This site collects my notes, essays, and occasional thoughts. Plain text, black on white.
+My [X(Twitter)](https://x.com/Yizhi_YZhang). My [LinkedIn](https://www.linkedin.com/in/azyoung/).
+
+yizhi2026 [at] foxmail [dot] com
