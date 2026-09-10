@@ -109,6 +109,8 @@ nav a:hover { text-decoration: underline; }
 .page-header { font-size: 1.5rem; margin: 0 0 1.2rem; }
 h3.year { font-size: 1.1rem; margin: 1.9rem 0 0.4rem; color: var(--muted); font-weight: 400; }
 .post-meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 2.1rem; }
+.post-meta .meta-tag { color: var(--muted); text-decoration: none; }
+.post-meta .meta-tag:hover { color: var(--fg); text-decoration: underline; }
 
 .post-content a { color: var(--fg); text-decoration: underline; }
 .post-content h2, .post-content h3 { line-height: 1.4; }

@@ -6,7 +6,7 @@
     var minutes = Math.max(1, Math.round(words / 220));
   %>
   <div class="post-meta">
-    <%= date(page.date, 'MMMM D, YYYY') %> &middot; <%= minutes %> min read
+    <%= date(page.date, 'MMMM D, YYYY') %> &middot; <%= minutes %> min read<% if (page.tags && page.tags.length) { page.tags.each(function(tag){ %> &middot; <a class="meta-tag" href="<%- url_for(tag.path) %>"><%= tag.name %></a><% }); } %>
   </div>
   <div class="post-content"><%- page.content %></div>
 </article>
