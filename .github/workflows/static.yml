@@ -26,6 +26,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      # Hexo builds permalinks using the runner's local time. Without this,
+      # posts dated before 08:00 Asia/Shanghai land on the previous day.
+      TZ: Asia/Shanghai
     steps:
       - name: Checkout
         uses: actions/checkout@v4
