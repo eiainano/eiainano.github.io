@@ -2,9 +2,7 @@
 title: Could Tom Beat Jerry? Bradley-Terry and Elo explained
 date: 2026-09-11 23:41:00
 tags:
-  - statistics
   - ranking
-  - machine-learning
 ---
 
 Every rating system ever built answers the same impossibly small question: *given a pile of who-beat-whom, how strong is everybody?*
